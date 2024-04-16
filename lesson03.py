@@ -5,10 +5,11 @@ line3 = ["O", "O", "O"]
 map = [line1, line2, line3]
 
 position = input("Wo soll der Schatz versteckt werden?\n")
+chars = ["a", "b", "c"]
 
-x = ord(position[0].lower()) - 96
-y = int(position[1])
+x = chars.index(position[0].lower())
+y = int(position[1]) - 1
 
-map[y-1][x-1] = "X"
+map[y][x] = "X"
 
 print(f"{line1}\n{line2}\n{line3}")
